@@ -1,0 +1,14 @@
+.topbar {
+  background-color: #000;
+  p {
+    margin: 0;
+  }
+  ul {
+    padding: 0;
+    display: inline-flex;
+    margin: 0 -8px;
+    li {
+      list-style: none;
+    }
+  }
+}
