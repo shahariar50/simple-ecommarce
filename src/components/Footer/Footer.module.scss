@@ -1,0 +1,27 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+  .footerTop {
+    border-bottom: 2px solid #fff;
+    .companyShortDetails {
+      p {
+        max-width: 252px;
+      }
+    }
+    .linksLists {
+      ul {
+        li {
+          list-style: none;
+          margin-bottom: 14px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          :global a {
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

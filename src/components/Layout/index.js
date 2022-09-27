@@ -1,3 +1,4 @@
+import Footer from "components/Footer";
 import Header from "components/Header";
 import Topbar from "components/Topbar";
 
@@ -7,6 +8,7 @@ const Layout = ({ children }) => {
       <Topbar />
       <Header />
       {children}
+      <Footer />
     </div>
   );
 };
