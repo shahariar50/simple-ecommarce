@@ -1,4 +1,15 @@
+@import "style.scss";
+
 .loginForm {
   max-width: 300px;
   margin: 0 auto;
+  .forgotPassLinkWrapper {
+    :global {
+      a {
+        text-decoration: none;
+        font-size: 10px;
+        color: $black;
+      }
+    }
+  }
 }

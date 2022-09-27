@@ -1,0 +1,41 @@
+@import "style.scss";
+
+.checkboxInput {
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 500;
+  input {
+    display: none;
+    &:checked ~ .checkmark {
+      background-color: $black;
+      &::after {
+        display: block;
+      }
+    }
+  }
+  .checkmark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 15px;
+    width: 15px;
+    background-color: $light-gray;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 2.5px;
+      width: 4px;
+      height: 8px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      display: none;
+    }
+  }
+}
