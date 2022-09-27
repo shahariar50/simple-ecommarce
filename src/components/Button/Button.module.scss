@@ -1,0 +1,14 @@
+@import "style.scss";
+
+.btn {
+  border: none;
+  &.size-md {
+    height: 42px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  &.color-primary {
+    background-color: $theme-primary;
+    color: white;
+  }
+}

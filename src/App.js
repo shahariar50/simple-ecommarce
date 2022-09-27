@@ -7,7 +7,7 @@ function App() {
     <Layout>
       <Routes>
         <Route path="/signin" element={<SignInPage />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Layout>
   );

@@ -43,19 +43,15 @@ const Header = () => {
           <div className={`${styles.rightSideIcons} d-flex align-items-center`}>
             <img
               className="mx-3"
-              src="/static/header/MagnifyingGlass.png"
+              src="/static/icons/MagnifyingGlass.png"
               alt="search"
             />
             <img
               className="mx-3"
-              src="/static/header/UserCircle.png"
+              src="/static/icons/UserCircle.png"
               alt="profile"
             />
-            <img
-              className="mx-3"
-              src="/static/header/BagSimple.png"
-              alt="bag"
-            />
+            <img className="mx-3" src="/static/icons/BagSimple.png" alt="bag" />
           </div>
         </div>
       </div>

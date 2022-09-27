@@ -12,17 +12,17 @@ const Topbar = () => {
           <ul>
             <li className="mx-2">
               <Link to="/">
-                <img src="/static/topbar/facebook.png" alt="facebook" />
+                <img src="/static/icons/facebook.png" alt="facebook" />
               </Link>
             </li>
             <li className="mx-2">
               <Link to="/">
-                <img src="/static/topbar/instagram.png" alt="instagram" />
+                <img src="/static/icons/instagram.png" alt="instagram" />
               </Link>
             </li>
             <li className="mx-2">
               <Link to="/">
-                <img src="/static/topbar/pinterest.png" alt="pinterest" />
+                <img src="/static/icons/pinterest.png" alt="pinterest" />
               </Link>
             </li>
           </ul>
