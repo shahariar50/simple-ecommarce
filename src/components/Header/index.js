@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import styles from "./Header.module.scss";
 
 const Header = () => {
   return (
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class={`navbar navbar-expand-lg ${styles.header}`}>
       <div class="container">
-        <Link class="navbar-brand" href="/">
+        <Link class="navbar-brand fw-bolder" href="/">
           Funshion
         </Link>
         <button
@@ -18,18 +19,43 @@ const Header = () => {
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ms-auto">
-            <a class="nav-link active" aria-current="page" href="#">
+        <div
+          class="collapse navbar-collapse d-flex justify-content-end"
+          id="navbarNavAltMarkup"
+        >
+          <div class="navbar-nav">
+            <Link class="nav-link text-black" to="/">
               Home
-            </a>
-            <a class="nav-link" href="#">
-              Features
-            </a>
-            <a class="nav-link" href="#">
-              Pricing
-            </a>
-            <a class="nav-link disabled">Disabled</a>
+            </Link>
+            <Link class="nav-link text-black" to="/">
+              About
+            </Link>
+            <Link class="nav-link text-black" to="/">
+              Shop
+            </Link>
+            <Link class="nav-link text-black" to="/">
+              Pages
+            </Link>
+            <Link class="nav-link text-black" to="/">
+              Blog
+            </Link>
+          </div>
+          <div className={`${styles.rightSideIcons} d-flex align-items-center`}>
+            <img
+              className="mx-3"
+              src="/static/header/MagnifyingGlass.png"
+              alt="search"
+            />
+            <img
+              className="mx-3"
+              src="/static/header/UserCircle.png"
+              alt="profile"
+            />
+            <img
+              className="mx-3"
+              src="/static/header/BagSimple.png"
+              alt="bag"
+            />
           </div>
         </div>
       </div>
