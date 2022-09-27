@@ -1,0 +1,15 @@
+@import "style.scss";
+
+.textInput {
+  input {
+    width: 100%;
+    background-color: $light-gray;
+    border: none;
+    height: 36px;
+    padding: 16px;
+    &:focus {
+      border: 0;
+      outline: 0;
+    }
+  }
+}

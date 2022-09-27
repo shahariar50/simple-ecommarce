@@ -1,3 +1,4 @@
+import LoginForm from "components/forms/LoginForm";
 import RadioInput from "components/inputes/RadioInput";
 import { Link } from "react-router-dom";
 import styles from "./Signinpage.module.scss";
@@ -13,11 +14,12 @@ const SignInPage = () => {
               className="me-30"
               name="signInOrLogin"
               label="Sign In"
+              checked
             />
             <RadioInput name="signInOrLogin" label="Create Account" />
           </div>
         </div>
-        <div></div>
+        <LoginForm />
         <div
           className={`${styles.bottomLink} mt-4 d-flex justify-content-center`}
         >

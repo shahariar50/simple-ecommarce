@@ -1,4 +1,5 @@
 /*==== Variables ====*/
+$light-gray: #eee;
 $black: #000;
 $theme-primary: #f09522;
 
@@ -73,4 +74,8 @@ body {
 .py-120 {
   padding-top: 120px;
   padding-bottom: 120px;
+}
+
+.text-theme-primary {
+  color: $theme-primary;
 }
