@@ -1,0 +1,37 @@
+@import "style.scss";
+
+.radioInput {
+  position: relative;
+  padding-left: 25px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  input {
+    opacity: 0;
+    &:checked ~ .checkmark:after {
+      display: block;
+    }
+  }
+  .checkmark {
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border: 1px solid $black;
+    border-radius: 50%;
+    &::after {
+      content: "";
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $theme-primary;
+    }
+  }
+}
