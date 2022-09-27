@@ -3,7 +3,7 @@ import styles from "./Header.module.scss";
 
 const Header = () => {
   return (
-    <nav className={`navbar navbar-expand-lg py-3 ${styles.header}`}>
+    <nav className={`navbar navbar-expand-lg bg-white py-3 ${styles.header}`}>
       <div className="container">
         <Link className="navbar-brand fw-bolder" href="/">
           Funshion
