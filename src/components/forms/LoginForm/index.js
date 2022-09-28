@@ -1,14 +1,33 @@
 import Button from "components/Button";
 import CheckboxInput from "components/inputes/CheckboxInput";
 import TextInput from "components/inputes/TextInput";
+import { Controller, useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import styles from "./LoginForm.module.scss";
 
 const LoginForm = () => {
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({ defaultValues: { email: "" } });
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
+  console.log(errors);
   return (
-    <form className={styles.loginForm}>
+    <form className={styles.loginForm} onSubmit={handleSubmit(onSubmit)}>
       <div className="mb-3">
-        <TextInput label="Email" fullWidth />
+        <Controller
+          control={control}
+          name="email"
+          render={({ field: { ...props } }) => (
+            <TextInput label="Email" fullWidth type="email" {...props} />
+          )}
+          rules={{ required: "Required an email." }}
+        />
       </div>
       <div className="mb-3">
         <TextInput label="Password" fullWidth />
