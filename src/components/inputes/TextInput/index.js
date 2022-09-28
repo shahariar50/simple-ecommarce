@@ -2,15 +2,13 @@ import React from "react";
 import styles from "./TextInput.module.scss";
 
 const TextInput = React.forwardRef(
-  ({ label, type = "text", className, fullWidth, ...props }, ref) => {
+  (
+    { label, type = "text", className, fullWidth, errorMessage, ...props },
+    ref
+  ) => {
     return (
-      <>
-        <label
-          className={`${className} ${fullWidth ? "w-100" : ""} ${
-            styles.textInput
-          }`}
-          ref={ref}
-        >
+      <div className={`${styles.textInput} ${className}`} ref={ref}>
+        <label className={`${fullWidth ? "w-100" : ""} mb-2`}>
           {/* {console.log(props)} */}
           <p className="mb-1">
             {label}
@@ -18,7 +16,8 @@ const TextInput = React.forwardRef(
           </p>
           <input type={type} {...props} />
         </label>
-      </>
+        <p className={styles.helperText}>{errorMessage}</p>
+      </div>
     );
   }
 );

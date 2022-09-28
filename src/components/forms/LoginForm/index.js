@@ -16,22 +16,41 @@ const LoginForm = () => {
     console.log(data);
   };
 
-  console.log(errors);
   return (
     <form className={styles.loginForm} onSubmit={handleSubmit(onSubmit)}>
-      <div className="mb-3">
-        <Controller
-          control={control}
-          name="email"
-          render={({ field: { ...props } }) => (
-            <TextInput label="Email" fullWidth type="email" {...props} />
-          )}
-          rules={{ required: "Required an email." }}
-        />
-      </div>
-      <div className="mb-3">
-        <TextInput label="Password" fullWidth />
-      </div>
+      <Controller
+        control={control}
+        name="email"
+        render={({ field: { ...props } }) => (
+          <TextInput
+            label="Email"
+            fullWidth
+            type="email"
+            className="mb-3"
+            errorMessage={errors?.email?.message}
+            {...props}
+          />
+        )}
+        rules={{ required: "Require an email." }}
+      />
+      <Controller
+        control={control}
+        name="password"
+        render={({ field: { ...props } }) => (
+          <TextInput
+            label="Password"
+            type="password"
+            fullWidth
+            className="mb-3"
+            errorMessage={errors?.password?.message}
+            {...props}
+          />
+        )}
+        rules={{
+          required: "Require a password.",
+          minLength: { value: 6, message: "Minimum 6 character needed." },
+        }}
+      />
       <div
         className={`${styles.forgotPassLinkWrapper} d-flex align-items-center justify-content-between mb-30`}
       >
