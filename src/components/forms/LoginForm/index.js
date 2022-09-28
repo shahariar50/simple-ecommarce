@@ -22,12 +22,12 @@ const LoginForm = () => {
       <Button fullWidth className="mb-3">
         Sign In
       </Button>
-      <div className={`${styles.orDevider} position-relative mb-3`}>
+      <div className={`${styles.orDevider} position-relative mb-2`}>
         <p className="d-inline-block mb-0">or</p>
       </div>
       <div className={styles.thirdPartySignIn}>
         <p className="text-center">Sign in with</p>
-        <ul>
+        <ul className="d-flex m-0 p-0 align-items-center justify-content-center">
           <li>
             <Link to="/">
               <img src="/static/icons/Google G.png" alt="google" />
