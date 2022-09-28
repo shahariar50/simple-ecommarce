@@ -9,7 +9,17 @@ const RegisterForm = () => {
     control,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+      address: "",
+      phone: "",
+    },
+  });
 
   const onSubmit = (data) => {
     console.log(data);
