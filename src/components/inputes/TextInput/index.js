@@ -3,7 +3,15 @@ import styles from "./TextInput.module.scss";
 
 const TextInput = React.forwardRef(
   (
-    { label, type = "text", className, fullWidth, errorMessage, ...props },
+    {
+      label,
+      type = "text",
+      className,
+      fullWidth,
+      errorMessage,
+      required,
+      ...props
+    },
     ref
   ) => {
     return (
@@ -12,7 +20,7 @@ const TextInput = React.forwardRef(
           {/* {console.log(props)} */}
           <p className="mb-1">
             {label}
-            {props?.required && <span className="text-theme-primary">*</span>}
+            {required && <span className="text-theme-primary">*</span>}
           </p>
           <input type={type} {...props} />
         </label>

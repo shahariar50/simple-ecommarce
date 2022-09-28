@@ -1,9 +1,13 @@
 import LoginForm from "components/forms/LoginForm";
+import RegisterForm from "components/forms/RegisterForm";
 import RadioInput from "components/inputes/RadioInput";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Signinpage.module.scss";
 
 const SignInPage = () => {
+  const [formState, setFormState] = useState("login");
+
   return (
     <div className={`pt-120 pb-100 ${styles.signInPage}`}>
       <div className="container">
@@ -14,12 +18,20 @@ const SignInPage = () => {
               className="me-30"
               name="signInOrLogin"
               label="Sign In"
-              checked
+              value="login"
+              onChange={({ target }) => setFormState(target.value)}
+              checked={formState === "login"}
             />
-            <RadioInput name="signInOrLogin" label="Create Account" />
+            <RadioInput
+              name="signInOrLogin"
+              value="register"
+              onChange={({ target }) => setFormState(target.value)}
+              label="Create Account"
+              checked={formState === "register"}
+            />
           </div>
         </div>
-        <LoginForm />
+        {formState === "login" ? <LoginForm /> : <RegisterForm />}
         <div
           className={`${styles.bottomLink} mt-4 d-flex justify-content-center`}
         >
